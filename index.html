@@ -42,6 +42,40 @@
     .contact { background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:30px; display:flex; justify-content:space-between; align-items:center; gap:24px; }
     footer { padding:28px 0; color:var(--muted); font-size:.9rem; }
     @media(max-width:760px) { .hero { grid-template-columns:1fr; padding:55px 0; } .visual { min-height:230px; } .grid,.steps { grid-template-columns:1fr; } .contact { flex-direction:column; align-items:flex-start; } }
+    .visual {
+  min-height: 330px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+}
+
+.visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 330px;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+.visual-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px;
+  background: linear-gradient(transparent, rgba(0,0,0,.85));
+}
+
+.visual-caption strong {
+  font-size: 1.35rem;
+  display: block;
+}
+
+.visual-caption small {
+  color: #ddd;
+}
   </style>
 </head>
 <body>
@@ -54,7 +88,13 @@
         <p>We connect individuals, dealers and businesses in Ghana with vehicle sourcing opportunities through a trusted supplier in China. Get vehicle options, pricing and guidance throughout the sourcing process.</p>
         <div class="actions"><a class="btn primary" href="#contact">Enquire on WhatsApp</a><a class="btn secondary" href="#process">How it works</a></div>
       </div>
-      <div class="visual"><strong>Source with confidence.</strong><small>Vehicle options · Sourcing support · Updates throughout the process</small></div>
+      <div class="visual">
+  <img src="Car.png" alt="Chinese vehicle available through A&J Source">
+  <div class="visual-caption">
+    <strong>Source with confidence.</strong>
+    <small>Vehicle options · Sourcing support · Updates throughout the process</small>
+  </div>
+</div>  
     </div>
     <section><div class="wrap"><h2>Vehicles for different needs</h2><p class="intro">Explore Chinese vehicle options for personal use, family, business and fleet needs.</p><div class="grid">
       <div class="card"><h3>SUVs</h3><p>Versatile vehicles for family, personal and business use.</p></div>
